@@ -61,6 +61,12 @@ const pipelines = await client.send(new ListPipelinesCommand({}));
 const executions = await client.send(new ListPipelineExecutionsCommand({
   pipelineName: 'my-pipeline',
 }));
+
+// get a pipeline execution
+const execution = await client.send(new GetPipelineExecutionCommand({
+  pipelineName: 'my-pipeline',
+  pipelineExecutionId: 'my-execution-id',
+}));
 ```
 
 ---

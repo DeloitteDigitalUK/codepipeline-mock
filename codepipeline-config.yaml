@@ -28,3 +28,13 @@ resources:
       headers:
         Content-Type: application/x-amz-json-1.1
       file: list-pipeline-executions.json
+
+  # see https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_GetPipelineExecution.html
+  - path: /
+    method: POST
+    requestHeaders:
+      X-Amz-Target: CodePipeline_20150709.GetPipelineExecution
+    response:
+      headers:
+        Content-Type: application/x-amz-json-1.1
+      file: get-pipeline-execution.json
